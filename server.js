@@ -11,13 +11,6 @@ let db,
 dbConnectionStr = "mongodb+srv://diya:123@oin.k333d9j.mongodb.net/?retryWrites=true&w=majority"
 dbName = 'oin';
 
-// try {
-//   const mongoAtlasLogin = require('./.env/config.js');
-//   dbConnectionStr = mongoAtlasLogin.DB_STRING
-// } catch(error) {
-//   console.error(error)
-// }
-
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
   .then(client => {
       console.log(`Connected to ${dbName} Database`)
